@@ -17,5 +17,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.ProductSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
 
 

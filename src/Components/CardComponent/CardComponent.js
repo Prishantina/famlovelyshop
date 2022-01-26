@@ -8,9 +8,7 @@ const CardComponent = (props) => {
 <div>
   <Card className="Products">
     <CardBody style={{ border: `10px solid ${props.color}` }}>
-      <CardTitle tag="h5">
-        Card title
-      </CardTitle>
+      <CardTitle tag="h5">Producto x</CardTitle>
       <CardSubtitle
         className="mb-2 text-muted"
         tag="h6"
