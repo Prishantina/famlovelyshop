@@ -1,6 +1,13 @@
+import ItemCount from "./itemCount";
+
+
 const ItemList = () => {
     return (
-        <p>Bienvenidos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem unde laborum, eligendi ratione debitis!</p>
+        <div>
+              <p>Bienvenidos!</p>
+              <ItemCount/>
+        </div>
+      
     )
 };
 
