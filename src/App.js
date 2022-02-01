@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar.js';
 import imagen from './Components/logo-fam/logo.png';
 import CardComponent from './Components/CardComponent/CardComponent';
 import ItemList from './Components/itemListContainer';
+import ItemList2 from './Components/ItemList2';
 
 const greyColor = "grey";
 const lightblueColor = "lightblue";
@@ -16,6 +17,7 @@ function App() {
           <NavBar/>
         </header>
         <ItemList/>
+        <div><ItemList2/></div>
         <div className='ProductSection'>
           <CardComponent color= {greyColor} />
           <CardComponent color= {lightblueColor} />

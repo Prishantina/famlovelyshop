@@ -1,10 +1,10 @@
 import ItemCount from "./itemCount";
+import './ItemListcontainer.css'
 
 
 const ItemList = () => {
     return (
-        <div>
-              <p>Bienvenidos!</p>
+        <div className="ItemListContainer">
               <ItemCount/>
         </div>
       

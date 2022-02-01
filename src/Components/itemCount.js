@@ -9,7 +9,6 @@ const ItemCount = () => {
             counter = stock
         }else{
         setCounter(counter +1);
-        alert("agregaste un producto a tu carrito");
     };
     };
     const handlerCounterDown = () => {
