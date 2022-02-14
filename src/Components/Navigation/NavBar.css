@@ -1,0 +1,17 @@
+.Navigation {
+    background-color: rgb(207, 226, 220); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+}
+.Link{
+    text-decoration: none;
+    color:#5d5f5f ;
+}

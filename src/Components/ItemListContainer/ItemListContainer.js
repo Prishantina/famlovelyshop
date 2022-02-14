@@ -1,5 +1,6 @@
-import ItemCount from "./itemCount";
-import './ItemListcontainer.css'
+import ItemCount from "./ItemCount";
+import '../ItemListContainer/ItemListcontainer.css';
+
 
 
 const ItemList = () => {
@@ -11,4 +12,5 @@ const ItemList = () => {
     )
 };
 
-export default ItemList
+
+export default ItemList;

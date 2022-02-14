@@ -1,45 +1,31 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import NavBar from './Components/NavBar.js';
-import imagen from './Components/logo-fam/logo.png';
-import CardComponent from './Components/CardComponent/CardComponent';
-import ItemList from './Components/itemListContainer';
-import ItemList2 from './Components/ItemList2';
-import ItemDetail from './Components/ItemDetailContainer/ItemDetail';
+import Header from './Components/HeaderComponent/Header';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './Views/Home';
+import Productos from './Views/Productos';
+import Contacto from './Views/Contacto';
+import ItemDetail from './Views/ItemDetail';
+import NavBar from './Components/Navigation/NavBar';
+import Footer from './Components/Footer/Footer';
 
-const greyColor = "grey";
-const lightblueColor = "lightblue";
-const lightgreenColor = "lightgreen";
-
-function App() {
-       const [data, setData] = useState({});
-       const [isLoading, setIsLoading] = useState(true);
-       useEffect(() => {
-         axios('https://api.nasa.gov/planetary/apod?api_key=iqhNacca41ZTXcqaxxXeDhpzL7VMUPrTVtHwzrav').then((res) => setData(res.data));
-         setTimeout(() => {
-           setIsLoading(false)
-         } , 2000)
-       }, []);
+const App =()=> {
   return (
-    <div className="App">
-        <header className="App-header">
-{         <img src={imagen} alt='logo-fam' width="220px" height="auto" /> }
-          <NavBar/>
-        </header>
-        <ItemList/>
-        <div>
-          {isLoading ? <p>Is Loading...</p> : <ItemDetail data={data}/>}
+     <Router>
+        <div className="App">
+            <Header/>
+            <NavBar />
         </div>
-        <div><ItemList2/></div>
-        <div className='ProductSection'>
-          <CardComponent color= {greyColor} />
-          <CardComponent color= {lightblueColor} />
-          <CardComponent color= {lightgreenColor} />
-        </div>
-      
-    </div>
 
+        <Routes>
+         <Route path="/" element={<Home/>}/>
+         <Route path="/Productos" element={<Productos/>}/>
+         <Route path="/Contacto" element={<Contacto/>}/>
+         <Route path='/detail/:id' element={<ItemDetail/>}/>
+       </Routes>
+       <Footer/>
+ 
+    </Router>
+   
   );
 }
 

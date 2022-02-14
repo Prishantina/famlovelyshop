@@ -1,32 +1,27 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import './Item.css';
+import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 
-const ItemDetail = ({ data }) => {
+const Item = ( {data} ) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
-        image={data.hdurl}
+        image={data.img}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.title}
+          {data.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-            {data.explanation}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-            {data.copyright}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-            {data.date}
+         {data.status}
         </Typography>
       </CardContent>
       <CardActions>
@@ -36,4 +31,7 @@ const ItemDetail = ({ data }) => {
     </Card>
   );
 }
-export default ItemDetail
+export default Item;
+
+
+
