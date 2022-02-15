@@ -1,32 +1,33 @@
 import React, { useState } from "react";
 
-let stock = 8;
 
-const ItemCount = () => {
-    const [counter, setCounter] = useState(0);
+const ItemCount = (props) => {
+    const [counter, setCounter] = useState(props.initial);
+    const stock = props.stock;
+
     const handlerCounterUp = () => {
-        if (counter == stock) {
-            counter = stock
+        if (counter <= stock) {
+            setCounter(counter + 1);
         }else{
-        setCounter(counter +1);
+        alert('No hay Stock de este producto');
     };
     };
     const handlerCounterDown = () => {
-        if (counter <= 0){
-            counter = 0
-        }else{
-        setCounter(counter -1);
-    };
+        if (counter >= 1){
+            setCounter(counter -1);
+        };
     };
     return (
         <div>      
-            <h3>Tu carrito de compras</h3>
+            <h3>Tu carrito</h3>
             <p>{counter}</p>
-            <button onClick={handlerCounterUp}>+ Agregar al carrito</button>
-            <button onClick={handlerCounterDown}>- Eliminar producto</button>
+
+            <button onClick={handlerCounterUp}>+ Agregar</button>
+           
+            <button onClick={handlerCounterDown}>- Quitar</button>
         </div>
   
 
     )
-};
+}; 
 export default ItemCount;

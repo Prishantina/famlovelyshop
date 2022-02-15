@@ -1,16 +1,14 @@
 import ItemCount from "./ItemCount";
 import '../ItemListContainer/ItemListcontainer.css';
 
-
-
-const ItemList = () => {
+ const ItemList = () => {
     return (
         <div className="ItemListContainer">
-              <ItemCount/>
+              {/* <ItemCount/> */}
         </div>
       
     )
-};
+}; 
 
 
-export default ItemList;
+export default ItemList;  

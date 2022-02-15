@@ -7,6 +7,7 @@ import Contacto from './Views/Contacto';
 import ItemDetail from './Views/ItemDetail';
 import NavBar from './Components/Navigation/NavBar';
 import Footer from './Components/Footer/Footer';
+import Cart from './Views/Cart';
 
 const App =()=> {
   return (
@@ -21,6 +22,7 @@ const App =()=> {
          <Route path="/Productos" element={<Productos/>}/>
          <Route path="/Contacto" element={<Contacto/>}/>
          <Route path='/detail/:id' element={<ItemDetail/>}/>
+         <Route path="/Cart" element={<Cart/>}/>
        </Routes>
        <Footer/>
  
